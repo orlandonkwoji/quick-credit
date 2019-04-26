@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Get a quick loan" />
+    <meta name="keywords" content="loan, borrow money" />
+    <meta name="author" content="Brad Traversy" />
+    <title>Quick Credit | Account Summary</title>
+    <link rel="stylesheet" href="./css/admin.css" />
+  </head>
+  <body onload="windowResize()" onresize="windowResize()">
+    <header>
+      <div class="container">
+        <div id="logo">
+          <h1><span class="highlight">Quick</span> Credit</h1>
+        </div>
+
+        <nav>
+          <ul>
+            <li id="menuBtn">
+              <a href="javascript:void(0);">&#9776;</a>
+            </li>
+            <li>
+              <a href="adminSummary.html">Summary</a>
+            </li>
+            <li><a href="adminLoans.html">Loans</a></li>
+            <li><a href="apply.html">Apply</a></li>
+            <li class="currentpage">
+              <a href="allCustomers.html">Customers</a>
+            </li>
+            <li><a href="logoutPage.html">Log out</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="centering">Customers</div>
+
+    <hr />
+
+    <section id="repaymentHistory">
+      <div id="adminLoansButtons">
+        <button
+          id="allCust"
+          class="loanButtonHighlight"
+          onclick="allCustomers()"
+        >
+          ALL
+        </button>
+        <button id="verCust" onclick="verifiedCust()">VERIFIED</button>
+        <button id="unverCust" onclick="unverifiedCust()">UNVERIFIED</button>
+      </div>
+
+      <hr />
+
+      <div>
+        <table id="historyTable">
+          <thead>
+            <th>account id</th>
+            <th>email</th>
+            <th>first name</th>
+            <th>last name</th>
+            <th>account status</th>
+          </thead>
+
+          <tbody id="loanTableBody">
+            <tr onclick="event.stopPropagation()">
+              <td>0123456789</td>
+              <td>smithwesson@guns.com</td>
+              <td>Smith</td>
+              <td>Wesson</td>
+              <td>unverified</td>
+            </tr>
+
+            <tr onclick="event.stopPropagation()">
+              <td>0123456789</td>
+              <td>smithwesson@guns.com</td>
+              <td>Smith</td>
+              <td>Wesson</td>
+              <td>unverified</td>
+            </tr>
+
+            <tr onclick="event.stopPropagation()">
+              <td>0123456789</td>
+              <td>smithwesson@guns.com</td>
+              <td>Smith</td>
+              <td>Wesson</td>
+              <td>unverified</td>
+            </tr>
+
+            <tr onclick="event.stopPropagation()">
+              <td>0123456789</td>
+              <td>smithwesson@guns.com</td>
+              <td>Smith</td>
+              <td>Wesson</td>
+              <td>unverified</td>
+            </tr>
+
+            <tr onclick="event.stopPropagation()">
+              <td>0123456789</td>
+              <td>smithwesson@guns.com</td>
+              <td>Smith</td>
+              <td>Wesson</td>
+              <td>unverified</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="sideMenu">
+      <div id="closeBtn">Close</div>
+      <div><a href="adminSummary.html">Summary</a></div>
+      <div class="currentpage"><a href="adminLoans.html">Loans</a></div>
+      <div><a href="postRepayment.html">Post</a></div>
+      <div class="currentpage"><a href="allCustomers.html">Customers</a></div>
+      <div><a href="logoutPage.html">Log out</a></div>
+    </section>
+
+    <div id="postToSingle">
+      <label for="postToSingle"
+        >To view a specific customer, input the account id below</label
+      >
+      <form action="\singleCustomerView.html">
+        <input type="number" name="accountId" placeholder="account id..." />
+        <input type="submit" />
+      </form>
+    </div>
+    <footer>
+      <p>Quick Credit, Copyright &copy; 2019</p>
+    </footer>
+    <script src="./js/admin.js"></script>
+  </body>
+</html>
