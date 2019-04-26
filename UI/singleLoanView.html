@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Get a quick loan" />
+    <meta name="keywords" content="loan, borrow money" />
+    <meta name="author" content="Brad Traversy" />
+    <title>Quick Credit | Single View</title>
+    <link rel="stylesheet" href="./css/admin.css" />
+  </head>
+  <body onload="windowResize()" onresize="windowResize()">
+    <header>
+      <div class="container">
+        <div id="logo">
+          <h1><span class="highlight">Quick</span> Credit</h1>
+        </div>
+
+        <nav>
+          <ul>
+            <li id="menuBtn">
+              <a href="javascript:void(0);">&#9776;</a>
+            </li>
+            <li>
+              <a href="accountSummary.html">Summary</a>
+            </li>
+            <li><a href="adminLoans.html">Loans</a></li>
+            <li><a href="postRepayment.html">Post</a></li>
+            <li ><a href="allCustomers.html">Customers</a></li>
+            <li><a href="logoutPage.html">Log out</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="centering">Single Loan View</div>
+
+    <hr />
+
+    <section id="summary">
+      <div id="summaryDiv">
+        <div>
+          <div class="toLeft">loan id</div>
+          <div class="toRight">01234</div>
+        </div>
+        <div>
+          <div class="toLeft">account id</div>
+          <div class="toRight">0123456789</div>
+        </div>
+        <div>
+          <div class="toLeft">amount</div>
+          <div class="toRight">100000</div>
+        </div>
+        <div>
+          <div class="toLeft">installment</div>
+          <div class="toRight">10500</div>
+        </div>
+
+        <div>
+          <div class="toLeft">paid</div>
+          <div class="toRight">42000</div>
+        </div>
+
+        <div>
+          <div class="toLeft">balance</div>
+          <div class="toRight">84000</div>
+        </div>
+
+        <div>
+          <div class="toLeft">interest</div>
+          <div class="toRight">30000</div>
+        </div>
+
+        <div>
+          <div class="toLeft">tenure</div>
+          <div class="toRight">12</div>
+        </div>
+
+        <div>
+          <div class="toLeft">date</div>
+          <div class="toRight">05-06-2018</div>
+        </div>
+
+        <div>
+          <div class="toLeft">repaid</div>
+          <div class="toRight">no</div>
+        </div>
+
+        <div>
+          <div class="toLeft">status</div>
+          <div class="toRight">pending</div>
+        </div>
+
+        
+    </section>
+
+    <section id="sideMenu">
+      <div id="closeBtn">Close</div>
+      <div><a href="accountSummary.html">Summary</a></div>
+      <div><a href="adminLoans.html">Loans</a></div>
+      <div><a href="postRepayment.html">Post</a></div>
+      <div ><a href="allCustomers.html">Customers</a></div>
+      <div><a href="logoutPage.html">Log out</a></div>
+    </section>
+
+    <section id="apply">
+      <div class="container padSingLoan">
+        <button>approve</button> <button>reject</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>Quick Credit, Copyright &copy; 2019</p>
+    </footer>
+    <script src="./js/admin.js"></script>
+  </body>
+</html>
