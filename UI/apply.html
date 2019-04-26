@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Get a quick loan" />
+    <meta name="keywords" content="loan, borrow money" />
+    <meta name="author" content="Brad Traversy" />
+    <title>Quick Credit | Loan Application</title>
+    <link rel="stylesheet" href="./css/customer.css" />
+  </head>
+  <body onload="windowResize()" onresize="windowResize()">
+    <header>
+      <div class="container">
+        <div id="logo">
+          <h1><span class="highlight">Quick</span> Credit</h1>
+        </div>
+
+        <nav>
+          <ul>
+            <li id="menuBtn">
+              <a href="javascript:void(0);">&#9776;</a>
+            </li>
+            <li>
+              <a href="accountSummary.html">Summary</a>
+            </li>
+            <li><a href="loans.html">Loans</a></li>
+            <li class="currentpage"><a href="apply.html">Apply</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="logoutPage.html">Log out</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="centering">Loan Application</div>
+
+    <hr />
+
+    <section id="loanApply">
+      <form action="">
+        <div class="address">
+          <div class="title">account details</div>
+          <input type="text" id="firstName" placeholder="first name..." />
+          <input type="text" id="lastName" placeholder="last name..." />
+          <input type="email" id="email" placeholder="email..." />
+          <input type="number" id="userId" placeholder="user id..." />
+          <input
+            type="password"
+            id="password"
+            class="password"
+            placeholder="password..."
+          />
+        </div>
+
+        <hr />
+
+        <div class="loanContainer">
+          <div class="title">loan details</div>
+          <input
+            type="number"
+            id="amount"
+            placeholder="loan amount..."
+            required
+            min="1"
+            max="100000"
+            step=".01"
+          />
+
+          <input
+            type="number"
+            id="tenure"
+            placeholder="tenure..."
+            required
+            min="1"
+            max="12"
+          />
+        </div>
+
+        <hr />
+
+        <input type="submit" value="Request" />
+      </form>
+    </section>
+
+    <section id="sideMenu">
+      <div id="closeBtn">Close</div>
+      <div><a href="accountSummary.html">Summary</a></div>
+      <div><a href="loans.html">Loans</a></div>
+      <div class="currentpage"><a href="apply.html">Apply</a></div>
+      <div><a href="notifications.html">Notifications</a></div>
+      <div><a href="logoutPage.html">Log out</a></div>
+    </section>
+
+    <footer>
+      <p>Quick Credit, Copyright &copy; 2019</p>
+    </footer>
+    <script src="./js/customer.js"></script>
+  </body>
+</html>
