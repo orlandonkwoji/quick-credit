@@ -1,0 +1,501 @@
+body {
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: skyblue;
+}
+
+/* Global */
+.container {
+  margin: auto;
+  overflow: hidden;
+  width: 80%;
+}
+
+.centering {
+  text-align: center;
+  color: #2c2a21;
+  font-size: 25px;
+  margin: 20px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* Header */
+header {
+  background: #2c2a21;
+  color: #ffffff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: skyblue 4px solid;
+}
+
+#menuBtn {
+  display: none;
+}
+
+header #logo {
+  float: left;
+}
+
+header #logo h1 {
+  margin: 0;
+}
+
+header nav {
+  margin-top: 10px;
+  float: right;
+}
+
+header li {
+  float: left;
+  padding: 0 20px 0 20px;
+  display: inline;
+}
+
+header .currentpage a,
+header .highlight {
+  font-weight: bold;
+  color: skyblue;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+header a:hover {
+  color: #cccccc75;
+  font-weight: bold;
+}
+
+/* Banner */
+#banner {
+  text-align: center;
+  background: url("../img/banner.jpg") no-repeat;
+  background-size: auto;
+  min-height: 300px;
+  color: white;
+}
+
+#banner p {
+  font-size: 20px;
+}
+
+#banner h1 {
+  font-size: 55px;
+  margin-bottom: 10px;
+  margin-top: 100px;
+}
+
+/* Apply */
+#apply {
+  text-align: center;
+  min-height: 150px;
+  color: white;
+  background-color: #2c2a21;
+  border-top: skyblue 4px solid;
+}
+
+#apply .container h1 {
+  margin-top: 30px;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+#apply .container button {
+  height: 38px;
+  width: 100px;
+  background: darkcyan;
+  border: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #ffffff;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Sidemenu */
+#sideMenu {
+  position: fixed;
+  z-index: 10;
+  width: 250px;
+  min-width: 250px;
+  background-color: #2c2a21;
+  height: 100%;
+  top: 0;
+  border-right: skyblue 4px solid;
+  border-top: skyblue 4px solid;
+  display: none;
+}
+
+#sideMenu div a {
+  text-decoration: none;
+}
+
+section .currentpage a {
+  font-weight: bold !important;
+  color: skyblue !important;
+}
+
+#sideMenu div,
+#sideMenu div a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 16px;
+  width: 150px;
+  padding: 20px;
+}
+
+#sideMenu div:hover,
+#sideMenu div a:hover {
+  color: #cccccc75;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#sideMenu #closeBtn {
+  color: red;
+}
+
+/* Login Form */
+#loginForm {
+  width: 400px;
+  margin: auto;
+  height: 100%;
+  min-height: 400px;
+  background-color: #2c2a21;
+}
+
+#loginForm form {
+  width: 200px;
+  margin: auto;
+}
+
+#loginForm label,
+#loginForm input[type="submit"],
+#loginForm input[type="password"],
+#loginForm input[type="text"] {
+  width: 80%;
+  color: #2c2a21;
+  padding: 14px 20px;
+  float: left;
+  border: none;
+  border-radius: 4px;
+}
+
+#loginForm label {
+  color: white;
+}
+
+#loginForm input[type="submit"] {
+  color: white;
+  background-color: darkcyan;
+  margin-left: 10%;
+  margin-top: 20px;
+}
+
+/* Account Summary */
+#summary {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 3px solid #2c2a21;
+  background-color: white;
+  color: #2c2a21;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+#summary .addTitle {
+  text-transform: uppercase;
+}
+
+#summary #summaryDiv {
+  padding: 10px;
+  margin: 10px;
+  border-right: 3px solid #2c2a21;
+}
+
+#summary .address {
+  margin-right: 15px;
+  border-right: 3px solid #2c2a21;
+  padding: 5px;
+  width: 180px;
+}
+
+#summary .toLeft {
+  text-align: left;
+  width: 100px;
+  text-transform: uppercase;
+}
+
+#summary toRight {
+  text-align: right;
+}
+
+#summary #summaryDiv div {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+
+/* Repayment History */
+#repaymentHistory {
+  margin: 0;
+  padding: 15px;
+  font-size: 20px;
+  line-height: 20px;
+  width: 60%;
+  margin: auto;
+  color: white;
+  background-color: #2c2a21;
+}
+
+#repaymentHistory #historyTable {
+  display: flex;
+  overflow: hidden;
+  background: none;
+}
+
+#repaymentHistory #historyTable thead {
+  display: flex;
+  flex-shrink: 0;
+  min-width: min-content;
+  background-color: white;
+  color: #2c2a21;
+  text-transform: uppercase;
+}
+
+#repaymentHistory #historyTable tbody {
+  display: flex;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+#repaymentHistory #historyTable tr {
+  display: flex;
+  flex-direction: column;
+  min-width: min-content;
+  flex-shrink: 0;
+}
+
+#repaymentHistory #historyTable th {
+  text-align: left;
+  font-size: 17px;
+}
+
+#repaymentHistory #historyTable td,
+#repaymentHistory #historyTable th {
+  display: block;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+/* Loan Application */
+#loanApply {
+  width: 500px;
+  margin: 30px auto;
+  background-color: #2c2a21;
+  padding: 10px;
+}
+
+#loanApply .loanContainer {
+  margin-top: 10px;
+}
+
+#loanApply .title {
+  color: skyblue;
+  text-align: center;
+  font-size: 16px;
+}
+
+#loanApply hr {
+  color: skyblue;
+}
+
+#loanApply input[type="submit"] {
+  width: 30%;
+  margin-left: 34%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: darkcyan;
+  border: 0;
+  color: white;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+#loanApply input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+#loanApply input[type="email"],
+#loanApply input[type="text"],
+#loanApply input[type="password"],
+#loanApply input[type="date"],
+#loanApply input[type="number"] {
+  width: 40%;
+  margin-left: 6%;
+  height: 30px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+#loanApply input[type="email"]:hover,
+#loanApply input[type="text"]:hover,
+#loanApply input[type="password"]:hover,
+#loanApply input[type="date"]:hover,
+#loanApply input[type="number"]:hover {
+  border: 3px skyblue solid;
+}
+
+/* Admin All Loans */
+#repaymentHistory #adminLoansButtons {
+  margin-left: 25%;
+  margin-bottom: 10px;
+}
+
+#repaymentHistory #adminLoansButtons button {
+  height: 38px;
+  width: 100px;
+  background: darkcyan;
+  border: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #ffffff;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#repaymentHistory .loanButtonHighlight {
+  background-color: white !important;
+  color: #2c2a21 !important;
+}
+
+#repaymentHistory #loanTableBody tr:hover {
+  background-color: white;
+  color: #033333;
+}
+
+#repaymentHistory #loanTableBody td:hover {
+  cursor: pointer;
+}
+
+#postToSingle {
+  width: 300px;
+  margin-left: 40%;
+  margin-top: 30px;
+}
+
+#postToSingle input[type="number"] {
+  width: 80%;
+  height: 25px;
+  margin-bottom: 10px;
+  padding: 3px;
+  font-size: 15px;
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+#postToSingle input[type="submit"] {
+  width: 130px;
+  height: 25px;
+  color: #2c2a21;
+  font-size: 15px;
+  margin-left: 17%;
+}
+
+#postToSingle label {
+  font-size: 20px;
+}
+
+#postToSingle input[type="submit"] {
+  cursor: pointer;
+}
+
+/* Single Loan View */
+#apply .padSingLoan {
+  padding: 10px;
+}
+
+/* Post Loan Repayment Transaction */
+#loanApply input[type="date"] {
+  color: #2c2a21;
+}
+
+footer {
+  color: white;
+  background-color: skyblue;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  height: 50px;
+  max-height: 50px;
+}
+
+/*Media Queries */
+@media (max-width: 768px) {
+  header nav li {
+    display: none;
+  }
+
+  #menuBtn {
+    display: inline !important;
+  }
+
+  header .container #logo,
+  header .container nav {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  header .container nav {
+    width: 40%;
+    margin-left: 40%;
+  }
+
+  #summary {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #summary #summaryDiv {
+    border-right: none;
+  }
+
+  #summary .address {
+    border-right: none;
+    text-align: center;
+  }
+
+  #loanApply {
+    width: 400px;
+  }
+
+  #loanApply input[type="email"],
+  #loanApply input[type="text"],
+  #loanApply input[type="password"],
+  #loanApply input[type="number"] {
+    width: 70%;
+    margin-left: 12%;
+  }
+
+  #postToSingle {
+    width: 250px;
+    margin-left: 30%;
+    margin-top: 30px;
+  }
+}
