@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Get a quick loan" />
+    <meta name="keywords" content="loan, borrow money" />
+    <meta name="author" content="Brad Traversy" />
+    <title>Quick Credit | Sign up</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body onload="windowResize()" onresize="windowResize()">
+    <header>
+      <div class="container">
+        <div id="logo">
+          <h1><span class="highlight">Quick</span> Credit</h1>
+        </div>
+
+        <nav>
+          <ul>
+            <li id="menuBtn">
+              <a href="javascript:void(0);">&#9776;</a>
+            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="accountApply">
+      <form action="">
+        <input type="text" id="firstName" placeholder="first name..." />
+        <input type="text" id="lastName" placeholder="last name..." />
+        <input type="email" id="email" placeholder="email..." />
+        <input
+          type="password"
+          id="password"
+          class="password"
+          placeholder="password..."
+        />
+        <input
+          type="password"
+          class="password"
+          placeholder="confirm password..."
+        />
+
+        <hr />
+
+        <div class="address">
+          <div class="title">home address</div>
+          <input type="street" id="hstreet" placeholder="street..." />
+
+          <input type="city" id="hcity" placeholder="city" />
+
+          <input type="state" id="hstate" placeholder="state" />
+
+          <input type="country" id="hcountry" placeholder="country" />
+        </div>
+
+        <hr />
+
+        <div class="address">
+          <div class="title">work address</div>
+          <input type="street" id="wstreet" placeholder="street..." />
+
+          <input type="city" id="wcity" placeholder="city" />
+
+          <input type="state" id="wstate" placeholder="state" />
+
+          <input type="country" id="wcountry" placeholder="country" />
+        </div>
+
+        <hr />
+
+        <input type="submit" value="Sign up" />
+      </form>
+    </section>
+
+    <section id="sideMenu">
+      <div id="closeBtn">Close</div>
+      <div><a href="index.html">Home</a></div>
+      <div><a href="login.html">Login</a></div>
+      <div><a href="about.html">About</a></div>
+    </section>
+
+    <section id="apply">
+      <div class="container">
+        <h1>Already have an account?</h1>
+        <a href="login.html"> <button>Sign in</button></a>
+      </div>
+    </section>
+
+    <footer>
+      <p>Quick Credit, Copyright &copy; 2019</p>
+    </footer>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
