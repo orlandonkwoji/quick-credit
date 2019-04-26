@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Get a quick loan" />
+    <meta name="keywords" content="loan, borrow money" />
+    <meta name="author" content="Brad Traversy" />
+    <title>Quick Credit | Account Summary</title>
+    <link rel="stylesheet" href="./css/customer.css" />
+  </head>
+  <body onload="windowResize()" onresize="windowResize()">
+    <header>
+      <div class="container">
+        <div id="logo">
+          <h1><span class="highlight">Quick</span> Credit</h1>
+        </div>
+
+        <nav>
+          <ul>
+            <li id="menuBtn">
+              <a href="javascript:void(0);">&#9776;</a>
+            </li>
+            <li>
+              <a href="accountSummary.html">Summary</a>
+            </li>
+            <li class="currentpage"><a href="loans.html">Loans</a></li>
+            <li><a href="apply.html">Apply</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="logoutPage.html">Log out</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="centering">Loan Repayment History</div>
+
+    <hr />
+
+    <section id="repaymentHistory">
+      <div>
+        <table id="historyTable">
+          <thead>
+            <th>loan id</th>
+            <th>amount</th>
+            <th>installment</th>
+            <th>paid</th>
+            <th>balance</th>
+            <th>tenure</th>
+            <th>date</th>
+            <th>repaid</th>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>01234</td>
+              <td>100000</td>
+              <td>10500</td>
+              <td>42000</td>
+              <td>84000</td>
+              <td>12</td>
+              <td>05-06-18</td>
+              <td>No</td>
+            </tr>
+
+            <tr>
+              <td>01234</td>
+              <td>100000</td>
+              <td>10500</td>
+              <td>42000</td>
+              <td>84000</td>
+              <td>12</td>
+              <td>05-06-18</td>
+              <td>No</td>
+            </tr>
+
+            <tr>
+              <td>01234</td>
+              <td>100000</td>
+              <td>10500</td>
+              <td>42000</td>
+              <td>84000</td>
+              <td>12</td>
+              <td>05-06-18</td>
+              <td>No</td>
+            </tr>
+
+            <tr>
+              <td>01234</td>
+              <td>100000</td>
+              <td>10500</td>
+              <td>42000</td>
+              <td>84000</td>
+              <td>12</td>
+              <td>05-06-18</td>
+              <td>No</td>
+            </tr>
+
+            <tr>
+              <td>01234</td>
+              <td>100000</td>
+              <td>10500</td>
+              <td>42000</td>
+              <td>84000</td>
+              <td>12</td>
+              <td>05-06-18</td>
+              <td>No</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="sideMenu">
+      <div id="closeBtn">Close</div>
+      <div><a href="accountSummary.html">Summary</a></div>
+      <div class="currentpage"><a href="loans.html">Loans</a></div>
+      <div><a href="apply.html">Apply</a></div>
+      <div><a href="notifications.html">Notifications</a></div>
+      <div><a href="logoutPage.html">Log out</a></div>
+    </section>
+
+    <footer>
+      <p>Quick Credit, Copyright &copy; 2019</p>
+    </footer>
+    <script src="./js/customer.js"></script>
+  </body>
+</html>
