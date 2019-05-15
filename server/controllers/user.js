@@ -58,7 +58,7 @@ module.exports = {
     const output = `const user =\n${JSON.stringify(userDb, null, 2)}\n\nmodule.exports = user;`;
     fs.writeFileSync(path.resolve('./server/models/userDb.js'), output);
 
-    const token = authenticate.generateToken(newUser.id, newUser.email, newUser.isAdmin);
+    const token = authenticate.createTokenWadmin(newUser.id, newUser.email, newUser.isAdmin);
     return res.status(201).json({
       status: 201,
       token,
@@ -68,6 +68,36 @@ module.exports = {
         lastName: newUser.lastName,
         email: newUser.email,
       },
+    });
+  },
+
+  login(req, res) {
+    const { error } = validator.verifyLogin(req.body);
+    if (error) {
+      return res.status(422).json({
+        status: 422,
+        error: error.details[0].message,
+      });
+    }
+
+    const user = userDb.find(usr => usr.email === req.body.email);
+    if (!user) {
+      return res.status(404).json({
+        status: 404,
+        error: 'Your email is not registered',
+      });
+    }
+    if (!Helper.comparePasswords(user.password, req.body.password)) {
+      return res.status(401).json({
+        status: 401,
+        error: 'Neither your password nor email is correct',
+      });
+    }
+    const token = authenticate.createTokenWpwd(user.id, user.email, user.isAdmin);
+    return res.status(200).json({
+      status: 200,
+      token,
+      data: user,
     });
   },
 };

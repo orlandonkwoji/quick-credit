@@ -8,9 +8,6 @@ module.exports = {
     const schema = joi.object().keys({
       email: joi
         .string()
-        .regex(
-          /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-        )
         .email()
         .trim()
         .required(),
@@ -55,5 +52,21 @@ module.exports = {
         .required(),
     });
     return joi.validate(user, schema);
+  },
+
+  verifyLogin(inputs) {
+    const schema = joi.object().keys({
+      email: joi
+        .string()
+        .email()
+        .trim()
+        .required(),
+      password: joi
+        .string()
+        .regex(/^[a-zA-Z0-9]{3,30}$/)
+        .trim()
+        .required(),
+    });
+    return joi.validate(inputs, schema);
   },
 };
