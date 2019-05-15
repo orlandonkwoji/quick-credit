@@ -1,0 +1,63 @@
+{
+  "name": "quickcredit",
+  "version": "1.0.0",
+  "description": "A loan credit facility",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node server/app.js",
+    "start:dev": "nodemon --exec babel-node server/app.js",
+    "test": "mocha --exit --require @babel/register",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "coveralls": "nyc --reporter=lcov --reporter=text-lcov npm test",
+    "showcoverage": "start ./coverage/index.html",
+    "parser": "babel-eslint",
+    "lint": "./node_modules/.bin/eslint test --fix"
+  },
+  "rules": {
+    "linebreak-style": 0,
+    "global-require": 0,
+    "eslint linebreak-style": [
+      0,
+      "error",
+      "windows"
+    ]
+  },
+  "author": "Orlando NKwoji",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/preset-react": "^7.0.0",
+    "babel-polyfill": "^6.26.0",
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "custom-env": "^1.0.1",
+    "dotenv": "^8.0.0",
+    "dotenv-expand": "^5.1.0",
+    "express": "^4.16.4",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "swagger-ui-express": "^4.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/register": "^7.4.4",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "faker": "^4.1.0",
+    "mocha": "^6.1.4",
+    "ng-faker": "^1.1.0",
+    "nodemon": "^1.19.0",
+    "path": "^0.12.7",
+    "prettier": "^1.17.0",
+    "sinon": "^7.3.2",
+    "supertest": "^4.0.2"
+  }
+}
