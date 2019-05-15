@@ -1,7 +1,5 @@
 import request from 'supertest';
 import chai from 'chai';
-import assert from 'assert';
-import http from 'http';
 import app from '../app';
 
 require('custom-env')
@@ -9,8 +7,6 @@ require('custom-env')
   .dotenvConfig({ encoding: 'utf8' });
 
 const { expect } = chai;
-
-console.log(process.env.PORT);
 
 describe('app.js', () => {
   it('should get home', done => {
@@ -34,7 +30,7 @@ describe('app.js', () => {
   });
 });
 
-/*describe('HTTP Server', () => {
+/* describe('HTTP Server', () => {
   it('should return 200', (done) => {
     http.get('http://localhost:5000/api/v1', (res) => {
       assert.equal(200, res.statusCode);
