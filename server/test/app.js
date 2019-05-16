@@ -9,19 +9,19 @@ require('custom-env')
 const { expect } = chai;
 
 describe('app.js', () => {
-  it('should get home', done => {
+  it('should get home', (done) => {
     request(app)
       .get('/api/v1')
-      .then(res => {
+      .then((res) => {
         expect(res.status).to.be.equal(200);
         done();
       })
       .catch(err => done(err));
   });
-  it('should return http err code 404', done => {
+  it('should return http err code 404', (done) => {
     request(app)
       .get('/api/v1/home')
-      .then(res => {
+      .then((res) => {
         expect(res.status).to.be.equal(404);
         expect(res.body).to.have.property('error');
         done();

@@ -90,14 +90,37 @@ module.exports = {
     if (!Helper.comparePasswords(user.password, req.body.password)) {
       return res.status(401).json({
         status: 401,
-        error: 'Neither your password nor email is correct',
+        error: 'Your password or email is incorrect',
       });
     }
-    const token = authenticate.createTokenWpwd(user.id, user.email, user.isAdmin);
+
+    let token;
+
+    if (user.isAdmin) {
+      token = authenticate.createTokenWadmin(user.id, user.email, user.isAdmin);
+    } else {
+      token = authenticate.createTokenWpwd(user.id, user.email, user.password);
+    }
+
     return res.status(200).json({
       status: 200,
       token,
       data: user,
+    });
+  },
+
+  allUsers(req, res) {
+    if (!req.user.isAdmin) {
+      return res.status(403).json({
+        status: 403,
+        error: 'Unauthorized access',
+      });
+    }
+
+    return res.status(200).json({
+      status: 200,
+      data: userDb,
+      rowCount: userDb.length,
     });
   },
 };
