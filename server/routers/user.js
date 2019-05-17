@@ -17,4 +17,6 @@ router.post('/signin', userController.login);
 
 router.get('/user', authenticate.tokenValidator, userController.allUsers);
 
+router.get('/user/:id', authenticate.tokenValidator, userController.oneUser);
+
 module.exports = router;
