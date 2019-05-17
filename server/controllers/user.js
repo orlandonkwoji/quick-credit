@@ -123,4 +123,27 @@ module.exports = {
       rowCount: userDb.length,
     });
   },
+
+  oneUser(req, res) {
+    if (!req.user.isAdmin) {
+      return res.status(403).json({
+        status: 403,
+        error: 'Unauthorized access',
+      });
+    }
+    const requestId = parseInt(req.params.id, 10);
+
+    const theUser = userDb.find(user => user.id === requestId);
+
+    if (!theUser) {
+      return res.status(404).json({
+        status: 404,
+        error: 'user is not on our database',
+      });
+    }
+    return res.status(200).json({
+      status: 200,
+      data: theUser,
+    });
+  },
 };

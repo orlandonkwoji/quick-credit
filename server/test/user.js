@@ -5,10 +5,11 @@ import app from '../app';
 
 const { expect } = chai;
 
+const userId = 1000000002;
 let tokenFrmPwd =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDAwMDAwMywiZW1haWwiOiJ0aG9yQG9kaW5zb24ucmFnbmFyb2siLCJwYXNzd29yZCI6IiQyYiQxMCRRbC80OWlnSnouelNWdU1UMHkxUFZ1WVl6MlFwb1VDcEE5N29pOHg1Y2hFRUpPVHBHZG1LQyIsImlhdCI6MTU1Nzk5MzI2NiwiZXhwIjoxNTU4MDA3NjY2fQ.7foCPSBw1FoStS1TFpe-3xI537ueoZ9mn31Oii83LMc';
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDAwMDAwMiwiZW1haWwiOiJ0aG9yQG9kaW5zb24ucmFnbmFyb2siLCJwYXNzd29yZCI6IiQyYiQxMCRRbC80OWlnSnouelNWdU1UMHkxUFZ1WVl6MlFwb1VDcEE5N29pOHg1Y2hFRUpPVHBHZG1LQyIsImlhdCI6MTU1ODA1NDExMywiZXhwIjoxNTU4MjI2OTEzfQ.5NXGFKUHMCME2sRt9DBEJOsqx_U-9chzx3G3VyGn-KE';
 let tokenFrmAdmin =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDAwMDAwMSwiZW1haWwiOiJvcmxhbmRvbmt3b2ppQGdtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTU1Nzk5MDQwNSwiZXhwIjoxNTU4MDA0ODA1fQ.qk0hT6STqDbUt4eFBs_JarEKNV3cl0GEpQZb7-006pY';
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAwMDAwMDAwMSwiZW1haWwiOiJvcmxhbmRvbmt3b2ppQGdtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTU1ODA1NDIxOSwiZXhwIjoxNTU4MjI3MDE5fQ.496w5XoxP34eGjw2gxE2oJc31Ik0KDKjE17iqNn5AJs';
 describe('User Route', () => {
   it('should signup a user with valid details', done => {
     request(app)
@@ -214,6 +215,20 @@ describe('User Route', () => {
         expect(body.status).to.be.equals(403);
         expect(body).to.haveOwnProperty('error');
         expect(body.error).to.be.equal('Unauthorized access');
+        done();
+      });
+  });
+
+  it('should get a user successfully', done => {
+    request(app)
+      .get(`/api/v1/auth/user/${userId}`)
+      .set('token', tokenFrmAdmin)
+      .end((err, res) => {
+        const { body } = res;
+        expect(body).to.be.an('object');
+        expect(body.status).to.be.a('number');
+        expect(body.status).to.be.equals(200);
+        expect(body).to.haveOwnProperty('data');
         done();
       });
   });
