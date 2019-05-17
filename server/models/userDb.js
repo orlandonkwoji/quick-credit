@@ -19,23 +19,6 @@ const user =
   },
   {
     "id": 1000000002,
-    "email": "",
-    "firstName": "Thor",
-    "lastName": "Odinson",
-    "password": "$2b$10$o776I4YfUtEAgTTtWHnmJ.CE94g0bb9cWrMBQumcVTvg4s/lQav4u",
-    "address": {
-      "street": "ragnarok",
-      "city": "jotunheim",
-      "state": "midgard",
-      "country": "valhalla"
-    },
-    "status": "unverified",
-    "isAdmin": false,
-    "signupDate": "2019-05-15T00:58:38.198Z",
-    "upDate": "2019-05-15T00:58:38.198Z"
-  },
-  {
-    "id": 1000000003,
     "email": "thor@odinson.ragnarok",
     "firstName": "Thor",
     "lastName": "Odinson",
@@ -53,54 +36,156 @@ const user =
   },
   {
     "id": 1000000004,
-    "email": "Major.Hoppe@hotmail.com",
-    "firstName": "Celia",
-    "lastName": "Schmeler",
-    "password": "$2b$10$D581/IiQUZpHKoTB9hXu9.15r855TE.pkMiHO/kOu4.kf/.biiTxO",
+    "email": "Israel.Schmidt1@yahoo.com",
+    "firstName": "Alfreda",
+    "lastName": "Gerlach",
+    "password": "$2b$10$9LgokL4GM3fuFMhRtLuPseOWPbJmExskFdJUR9P4OaXAQ8c1.FEZC",
     "address": {
-      "street": "490 Howe Rest",
-      "city": "Port Osborne",
-      "state": "Texas",
-      "country": "Virgin Islands, U.S."
+      "street": "4426 Lockman Plaza",
+      "city": "West Howellbury",
+      "state": "Alabama",
+      "country": "Maldives"
     },
     "status": "unverified",
     "isAdmin": false,
-    "signupDate": "2019-05-15T13:48:37.222Z",
-    "upDate": "2019-05-15T13:48:37.225Z"
+    "signupDate": "2019-05-16T09:44:37.441Z",
+    "upDate": "2019-05-16T09:44:37.444Z"
   },
   {
     "id": 1000000005,
-    "email": "Ewald.Sawayn16@gmail.com",
-    "firstName": "Shawn",
-    "lastName": "Wisoky",
-    "password": "$2b$10$N4q6sQONn7FsUlsro63d..IS35UzMU3M8.W3rVALRvjb53iA8Xkri",
+    "email": "Cierra47@yahoo.com",
+    "firstName": "Fabiola",
+    "lastName": "Pouros",
+    "password": "$2b$10$NyO1ApjCpfXcTbcWER9FTOaw39FwSW1DSyA/HnDxMpbrplhrz2cg.",
     "address": {
-      "street": "96514 Collins Lodge",
-      "city": "West Payton",
-      "state": "Indiana",
-      "country": "Venezuela"
+      "street": "777 Conroy Knolls",
+      "city": "South Augustushaven",
+      "state": "Hawaii",
+      "country": "Reunion"
     },
     "status": "unverified",
     "isAdmin": false,
-    "signupDate": "2019-05-15T14:00:58.030Z",
-    "upDate": "2019-05-15T14:00:58.033Z"
+    "signupDate": "2019-05-16T09:51:49.969Z",
+    "upDate": "2019-05-16T09:51:49.972Z"
   },
   {
     "id": 1000000006,
-    "email": "Gerald.Ferry11@hotmail.com",
-    "firstName": "America",
-    "lastName": "Considine",
-    "password": "$2b$10$YGLan63FaVqYgKDSLZqJbOLfeK.yLlQpwSeIVQJ1RgO2YhdihF1p2",
+    "email": "Adelle.Bailey9@hotmail.com",
+    "firstName": "Brittany",
+    "lastName": "Brown",
+    "password": "$2b$10$NWoO0Om3svZPu2m/3gJq3.bwbegcOHx19pIHOI/tbVxXn3BBNqMUK",
     "address": {
-      "street": "2424 Murray River",
-      "city": "Schneidertown",
-      "state": "Vermont",
-      "country": "Ukraine"
+      "street": "8660 Corine Parks",
+      "city": "Darefort",
+      "state": "Wisconsin",
+      "country": "Cambodia"
     },
     "status": "unverified",
     "isAdmin": false,
-    "signupDate": "2019-05-15T14:02:58.173Z",
-    "upDate": "2019-05-15T14:02:58.177Z"
+    "signupDate": "2019-05-16T10:11:28.626Z",
+    "upDate": "2019-05-16T10:11:28.629Z"
+  },
+  {
+    "id": 1000000007,
+    "email": "Astrid.Strosin@yahoo.com",
+    "firstName": "Tommie",
+    "lastName": "Rempel",
+    "password": "$2b$10$2I0wAwjSS5NOWEtaPHEADu5yMgqeEGUhVfgTrEBqQPCbkBGE6VQuq",
+    "address": {
+      "street": "4328 Anais Drives",
+      "city": "Lake Lisandroburgh",
+      "state": "Oregon",
+      "country": "Samoa"
+    },
+    "status": "unverified",
+    "isAdmin": false,
+    "signupDate": "2019-05-16T10:23:23.443Z",
+    "upDate": "2019-05-16T10:23:23.446Z"
+  },
+  {
+    "id": 1000000008,
+    "email": "Alena_Kassulke@gmail.com",
+    "firstName": "Michel",
+    "lastName": "Bogan",
+    "password": "$2b$10$eXfxU7UCAUQgKpmjJwxTEOaksAKQbJH7dqnJG6odcVIHVGqfiXCYe",
+    "address": {
+      "street": "7347 Hessel Viaduct",
+      "city": "Rathport",
+      "state": "New Mexico",
+      "country": "Virgin Islands, British"
+    },
+    "status": "unverified",
+    "isAdmin": false,
+    "signupDate": "2019-05-16T10:36:15.580Z",
+    "upDate": "2019-05-16T10:36:15.583Z"
+  },
+  {
+    "id": 1000000009,
+    "email": "Ericka_Bogan@hotmail.com",
+    "firstName": "Henri",
+    "lastName": "Cormier",
+    "password": "$2b$10$C2Gpdk6YdIKjwesuVlmiYeQoOzMxKNHxm40m6LIKzQMPiZKLAVwBq",
+    "address": {
+      "street": "7134 Graciela Causeway",
+      "city": "Kiehnshire",
+      "state": "Delaware",
+      "country": "Libyan Arab Jamahiriya"
+    },
+    "status": "unverified",
+    "isAdmin": false,
+    "signupDate": "2019-05-16T10:45:55.249Z",
+    "upDate": "2019-05-16T10:45:55.252Z"
+  },
+  {
+    "id": 1000000010,
+    "email": "Aaliyah89@yahoo.com",
+    "firstName": "Hollie",
+    "lastName": "Prohaska",
+    "password": "$2b$10$.svhVjKdnCnmZFG1VcSQJuegJvZKXT7YNnHfgB0XiiMIVGXbYHIwm",
+    "address": {
+      "street": "93752 Delphine Unions",
+      "city": "Lake Marjory",
+      "state": "Wyoming",
+      "country": "Colombia"
+    },
+    "status": "unverified",
+    "isAdmin": false,
+    "signupDate": "2019-05-16T10:47:41.035Z",
+    "upDate": "2019-05-16T10:47:41.038Z"
+  },
+  {
+    "id": 1000000011,
+    "email": "Kayley_Paucek20@hotmail.com",
+    "firstName": "Kip",
+    "lastName": "Daugherty",
+    "password": "$2b$10$GtM5MJaIdG9kz9MTgvQsBOa89jekabUuEWTvQTgNwIPoOmx0jPr2i",
+    "address": {
+      "street": "768 Opal Park",
+      "city": "East Reymundostad",
+      "state": "West Virginia",
+      "country": "Philippines"
+    },
+    "status": "unverified",
+    "isAdmin": false,
+    "signupDate": "2019-05-16T20:50:07.257Z",
+    "upDate": "2019-05-16T20:50:07.267Z"
+  },
+  {
+    "id": 1000000012,
+    "email": "Ubaldo.Kling80@gmail.com",
+    "firstName": "Orlando",
+    "lastName": "Rolfson",
+    "password": "$2b$10$S/aGvgzkI.HrqvdStyHg6.NemK5ecZsqscDDYLu1FxCZkg1lsOFEi",
+    "address": {
+      "street": "8636 Courtney Ports",
+      "city": "Yundtland",
+      "state": "Hawaii",
+      "country": "Iceland"
+    },
+    "status": "unverified",
+    "isAdmin": false,
+    "signupDate": "2019-05-16T20:57:00.811Z",
+    "upDate": "2019-05-16T20:57:00.814Z"
   }
 ]
 
